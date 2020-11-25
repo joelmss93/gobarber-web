@@ -1,9 +1,16 @@
-import React from 'react';
+import { buttons } from 'polished';
+import React, { ButtonHTMLAttributes } from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
-const Button: React.FC = () => {
-  return <div />;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+const Button: React.FC<ButtonProps> = ({ children, ...rest }) => {
+  return (
+    <Container type="button" {...rest}>
+      {children}
+    </Container>
+  );
 };
 
 export default Button;
