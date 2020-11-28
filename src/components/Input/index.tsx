@@ -61,5 +61,4 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
     </Container>
   );
 };
-
 export default Input;
