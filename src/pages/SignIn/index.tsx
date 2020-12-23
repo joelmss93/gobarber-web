@@ -7,7 +7,7 @@ import { Link, useHistory } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
-import geValidationErrors from '../../utils/getValidationErrors';
+import getValidationErrors from '../../utils/getValidationErrors';
 
 import logoImg from '../../assets/logo.svg';
 import Input from '../../components/Input';
@@ -50,11 +50,11 @@ const SignIn: React.FC = () => {
         history.push('/dashboard');
       } catch (error) {
         if (error instanceof Yup.ValidationError) {
-          const errors = geValidationErrors(error);
+          const errors = getValidationErrors(error);
 
           formRef.current?.setErrors(errors);
 
-          return;
+          // return;
         }
 
         addToast({

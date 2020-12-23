@@ -27,8 +27,8 @@ const SignUp: React.FC = () => {
   const { addToast } = useToast();
   const history = useHistory();
 
-  const handleSubmit = useCallback(
-    async (data: object) => {
+  const handleSignUp = useCallback(
+    async (data: SignUpFormData) => {
       try {
         formRef.current?.setErrors({});
 
@@ -77,7 +77,7 @@ const SignUp: React.FC = () => {
         <AnimationContainer>
           <img src={logoImg} alt="GoBarber" />
 
-          <Form ref={formRef} onSubmit={handleSubmit}>
+          <Form ref={formRef} onSubmit={handleSignUp}>
             <h1>Faça seu cadastro</h1>
 
             <Input name="name" icon={FiUser} placeholder="Nome" />
