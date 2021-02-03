@@ -95,11 +95,6 @@ const SignUp: React.FC = () => {
 
             <Link to="/">Voltar para logon</Link>
           </Form>
-
-          <a href="login">
-            <FiLogIn />
-            Criar conta
-          </a>
         </AnimationContainer>
       </Content>
     </Container>
